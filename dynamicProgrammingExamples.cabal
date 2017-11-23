@@ -1,0 +1,39 @@
+name:                dynamicProgrammingExamples
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/EsGeh/change#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Samuel Gfrörer
+maintainer:          samuel.gfroerer@fu-berlin.de
+copyright:           Samuel Gfrörer
+category:            Example
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable change
+  hs-source-dirs:      src
+  main-is:             TestMoneyChanger.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5,
+                       containers,
+                       mtl,
+                       array,
+                       QuickCheck
+  ghc-options: -Wall -fno-warn-tabs
+
+executable maxIndepNodes
+  hs-source-dirs:      src
+  main-is:             MaxIndepNodes.hs
+  other-modules: Types.Tree
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5,
+                       containers,
+                       mtl,
+                       array,
+                       QuickCheck,
+                       criterion,
+                       deepseq
+  ghc-options: -Wall -fno-warn-tabs
